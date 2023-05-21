@@ -14,8 +14,15 @@ import java.util.Set;
 
 public class BasePage {
 
+
+    public static BasePage getBasePage() {
+        //Không cần khởi tạo mà vẫn truy cập vào hàm này được
+        //Truy cập trực tiếp từ phạm vi Class
+        return new BasePage();
+    }
+
     public void openPageUrl(WebDriver driver, String pageURL) {
-        driver.get("pageURL");
+        driver.get(pageURL);
     }
 
     public String getPageTitle(WebDriver driver) {
@@ -158,15 +165,15 @@ public class BasePage {
         return select.isMultiple();
     }
 
-    public String getWebElementAttribute (WebDriver driver, String xpathLocator, String attributeName) {
+    public String getElementAttribute (WebDriver driver, String xpathLocator, String attributeName) {
         return getWebElement(driver,xpathLocator).getAttribute(attributeName);
     }
 
-    public String getWebElementText (WebDriver driver, String xpathLocator) {
+    public String getElementText (WebDriver driver, String xpathLocator) {
         return getWebElement(driver,xpathLocator).getText();
     }
 
-    public String getWebElementCssValue (WebDriver driver, String xpathLocator, String propertyName) {
+    public String getElementCssValue (WebDriver driver, String xpathLocator, String propertyName) {
         return getWebElement(driver, xpathLocator).getCssValue(propertyName);
     }
 
@@ -174,7 +181,7 @@ public class BasePage {
         return Color.fromString(rgbaValue).asHex();
     }
 
-    public int getWebElementSize (WebDriver driver, String xpathLocator) {
+    public int getElementSize (WebDriver driver, String xpathLocator) {
         return getListWebElement(driver, xpathLocator).size();
     }
 

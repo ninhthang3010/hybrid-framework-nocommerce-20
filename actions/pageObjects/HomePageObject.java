@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import pageUIs.HomePageUI;
 
 
-public class HomePageObject extends BasePage {
+public class HomePageObject extends BasePage{
 
     //map driver giua nhieu class khac nhau.
     WebDriver driver;
@@ -16,5 +16,15 @@ public class HomePageObject extends BasePage {
     public void clickToRegisterLink() {
         waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
         clickToElement(driver,HomePageUI.REGISTER_LINK);
+    }
+
+    public void clickToLoginLink() {
+        waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
+        clickToElement(driver, HomePageUI.LOGIN_LINK);
+    }
+
+    public void clickToMyAccountLink() {
+        waitForElementClickable(driver, HomePageUI.MYACCOUNT_LINK);
+        clickToElement(driver, HomePageUI.MYACCOUNT_LINK);
     }
 }
