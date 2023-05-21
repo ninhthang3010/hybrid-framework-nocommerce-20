@@ -4,6 +4,9 @@ package pageUIs;
 public class HomePageUI {
     // Chỉ chứa biến
     public static final String REGISTER_LINK ="//a[@class='ico-register']";
+    public static final String LOGIN_LINK ="//a[@class='ico-login']";
+    public static final String MYACCOUNT_LINK ="//a[@class='ico-myaccount']";
+
 
     //1 - public
     // Khong set protected vì các class bên ngoài package sẽ không dùng được > Không ap dung ke thừa
